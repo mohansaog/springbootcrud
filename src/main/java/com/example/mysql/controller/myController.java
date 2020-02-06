@@ -62,7 +62,7 @@ public class myController {
 		emp.setId(id);
 		service.updateEmployee(emp);
 		return "updated successfully";
-	}
+	} 
 
 	@DeleteMapping("/deleteEmployee/{id}")
 	public String deleteEmployeeById(@PathVariable Integer id) throws Exception {
@@ -70,6 +70,6 @@ public class myController {
 		if (!emp.isPresent())
 			throw new Exception("id not present");
 		service.deleteById(id);
-		return "delete successfully";
+		return "delete successfully"; 
 	}
 }
